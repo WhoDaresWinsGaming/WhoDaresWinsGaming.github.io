@@ -14,7 +14,7 @@ git pull origin ip
 # If the IP in the file is not our current IP
 if [ "$(cat 'ip')" != "$(curl 'http://www.wtfismyip.com/text')" ]; then
 	# Save the new IP and current time
-	curl 'http://www.wtfismyip.com/text' > ip
+	curl 'https://wtfismyip.com/text' > ip
 	date +%s > time
 
 	# Update using Git
