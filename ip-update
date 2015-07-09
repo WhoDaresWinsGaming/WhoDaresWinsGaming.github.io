@@ -8,7 +8,7 @@ git pull
 git checkout ip
 
 # If the IP in the file is not our current IP
-if [cat my_ip != curl 'http://www.wtfismyip.com/text'] then
+if [ cat 'ip' != curl 'http://www.wtfismyip.com/text' ]; then
 	# Save the new IP and current time
 	curl 'http://www.wtfismyip.com/text' > ip
 	date +%s > time
