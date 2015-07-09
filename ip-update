@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#		ip-update
+#		(C) XENXIER 2015 - ALL RIGHTS ETC
+
+# Setup, wdw-ts must have a Github repo in it (Geraint don't even, let me do it)
+cd ~
+mkdir -p wdw-ts
+cd wdw-ts
+
+# If the IP in the file is not our current IP
+if [cat my_ip != curl 'http://www.wtfismyip.com/text'] then
+	# Save the new IP
+	curl 'http://www.wtfismyip.com/text' > my_ip
+	
+	# Update using Git
+	git add . -a
+	git commit -m -a 'Update IP'
+	git push origin master
+fi
