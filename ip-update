@@ -11,12 +11,10 @@
 git checkout ip
 git pull origin ip
 
-IP=curl 'https://wtfismyip.com/text'
-
 # If the IP in the file is not our current IP
-if [ "$(cat 'ip')" != "$($IP)"]; then
+if [ "$(cat 'ip')" != "$(curl 'https://wtfismyip.com/text')"]; then
 	# Save the new IP and current time
-	curl "$($IP)" > ip
+	curl 'https://wtfismyip.com/text' > ip
 	date +%s > time
 
 	# Update using Git
