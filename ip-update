@@ -14,9 +14,9 @@ git pull origin ip
 IP = curl 'https://wtfismyip.com/text'
 
 # If the IP in the file is not our current IP
-if [ "$(cat 'ip')" != $IP ]; then
+if [ "$(cat 'ip')" != "$($IP)"]; then
 	# Save the new IP and current time
-	curl $IP > ip
+	curl "$($IP)" > ip
 	date +%s > time
 
 	# Update using Git
