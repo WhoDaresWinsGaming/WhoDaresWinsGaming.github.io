@@ -3,9 +3,13 @@
 # ip-update
 # 	(C) XENXIER 2015 - ALL RIGHTS ETC
 
-# Git Stuff
-git pull
+# Self update
+git checkout master
+git pull origin master
+
+# Get IP and checkout
 git checkout ip
+git pull origin ip
 
 # If the IP in the file is not our current IP
 if [ cat 'ip' != curl 'http://www.wtfismyip.com/text' ]; then
