@@ -22,4 +22,5 @@ if [ "$(cat ip)" != "$(curl 'https://wtfismyip.com/text')" ]; then
 	git add time
 	git commit -m 'Update IP'
 	git push origin ip
+	git checkout master
 fi
