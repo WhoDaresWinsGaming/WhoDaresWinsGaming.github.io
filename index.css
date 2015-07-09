@@ -40,7 +40,7 @@ img {
 
 footer {
 	display: block;
-	border-top: solid thin #999;
+	border-top: solid thin #999;-
 	color: #999;
 	text-transform: uppercase;
 	padding-top: 1em;
