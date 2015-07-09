@@ -43,12 +43,16 @@
 			</header>
 			<div id="page">
 				<h1>Geraints Sick Website</h1>
-				<div id="ip" class="well well-lg"></div>
+				<div id="ip" class="well well-lg">
+					<h1></h1>
+					<h2></h2>
+				</div>
 			</div>
 		</main>
 	<!-- CDN Javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
 	
 	<script>
 		// http://stackoverflow.com/a/13329900
@@ -67,15 +71,29 @@
 			}
 		}
 		
-		// Get the IP
-		getFileFromServer("https://rawgit.com/WhoDaresWinsGaming/WhoDaresWinsGaming.github.io/ip/ip", function(txt) {
-			if (txt === null) {
-				// An error occurred
-				console.error("Oh noes! Can't get the server IP :(");
-			} else {
-				$("#ip").text(txt);
-			}
-		});
+		jQuery(document).ready(function() {
+  			jQuery("abbr.timeago").timeago();
+  			
+			// Get the IP
+			getFileFromServer("https://rawgit.com/WhoDaresWinsGaming/WhoDaresWinsGaming.github.io/ip/ip", function(txt) {
+				if (txt === null) {
+					// An error occurred
+					console.error("Oh noes! Can't get the server IP :(");
+				} else {
+					$("#ip > h1").text(txt);
+				}
+			});
+		
+			// Get the time since the last update
+			getFileFromServer("https://rawgit.com/WhoDaresWinsGaming/WhoDaresWinsGaming.github.io/ip/time", function(txt) {
+				if (txt === null) {
+					// An error occurred
+					console.error("Oh noes! Can't get the server time :(");
+				} else {
+					$("#ip > h2").text("Server last updated: " + jQuery.timeago(txt));
+				}
+			});
+  		});
 	</script>
 	</body>
 </html>

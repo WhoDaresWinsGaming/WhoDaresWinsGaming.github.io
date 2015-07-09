@@ -1,3 +1,15 @@
 * {
 	font-family: 'Comic Sans MS';
 }
+
+#ip * {
+	text-align: center;
+}
+
+#ip h1 {
+	font-size: 5em;
+}
+
+#ip h2 {
+	font-size: 2em;
+}
