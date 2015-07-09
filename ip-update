@@ -13,12 +13,17 @@ cd /home/teamspeak/WhoDaresWinsGaming.github.io/
 git checkout ip
 git pull origin ip
 
+curl 'https://wtfismyip.com/text' > temp
+
 # If the IP in the file is not our current IP
-if [ "$(cat ip)" != "$(curl 'https://wtfismyip.com/text')" ]; then
+if [ "$(cat ip)" != "$(cat temp)" ]; then
 
 	# Save the new IP and current time
-	curl 'https://wtfismyip.com/text' > ip
+	cat temp > ip
 	date -I's' > time
+
+	# Remove temp file
+	rm -rf temp
 
 	# Update using Git
 	git add ip
@@ -26,6 +31,9 @@ if [ "$(cat ip)" != "$(curl 'https://wtfismyip.com/text')" ]; then
 	git commit -m 'Update IP'
 	git push origin ip
 fi
+
+# Remove temp file
+rm -rf temp
 
 # Switch back
 git checkout master
