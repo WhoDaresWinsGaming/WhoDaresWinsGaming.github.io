@@ -7,12 +7,12 @@
 #git checkout master
 #git pull origin master
 
-# Get IP and checkout
-git checkout ip
-git pull origin ip
-
 # If the IP in the file is not our current IP
 if [ "$(cat ip)" != "$(curl 'https://wtfismyip.com/text')" ]; then
+	# Get IP and checkout
+	git checkout ip
+	git pull origin ip
+
 	# Save the new IP and current time
 	curl 'https://wtfismyip.com/text' > ip
 	date -I's' > time
