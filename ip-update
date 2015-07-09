@@ -11,7 +11,7 @@
 git checkout ip
 git pull origin ip
 
-IP = curl 'https://wtfismyip.com/text'
+IP=curl 'https://wtfismyip.com/text'
 
 # If the IP in the file is not our current IP
 if [ "$(cat 'ip')" != "$($IP)"]; then
