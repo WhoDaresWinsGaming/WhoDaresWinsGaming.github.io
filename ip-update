@@ -12,7 +12,7 @@ cd /home/teamspeak/ip/
 curl 'https://wtfismyip.com/text' > temp
 
 # If the IP in the file is not our current IP
-if [ "$(cat ip)" != "$(cat temp)" ]; then
+#if [ "$(cat ip)" != "$(cat temp)" ]; then
 	# Save the new IP and current time
 	rm ip
 	mv temp ip
@@ -22,7 +22,7 @@ if [ "$(cat ip)" != "$(cat temp)" ]; then
 	git add .
 	git commit -m 'Update IP'
 	git push origin ip
-fi
+#fi
 
 # Remove temp file
 rm -rf temp
