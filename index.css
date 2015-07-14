@@ -2,9 +2,22 @@
 	font-family: 'Oswald', sans-serif;
 }
 
+body {
+	padding-top: 1em;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	font-weight: 100;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+p {
+	font-weight: 100;
+	font-size: 1.25em;
 }
 
 nav * {
@@ -40,12 +53,12 @@ img {
 
 footer {
 	display: block;
-	border-top: solid thin #999;-
-	color: #999;
+	border-top: solid thin #AAA;
+	color: #AAA;
 	text-transform: uppercase;
 	padding-top: 1em;
 	padding-bottom: 1em;
-	font-weight: 300;
+	font-weight: 400;
 	text-align: center;
 }
 
@@ -57,4 +70,32 @@ footer {
 	.jumbotron * {
 		width: 100%;
 	}
+}
+
+#leader {
+	margin-left: 2em;
+	margin-bottom: 2em;
+	display: inline;
+	height: 15em;
+	width: 15em;
+	float: right;
+	background-position: center;
+	background-size: cover;
+	background-image: url(http://a3.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTIwNjA4NjM0MjAzODMzODY4.jpg);
+	border: solid thin #AAA;
+}
+
+#leader span {
+	font-size: 0.9em;
+	margin: auto;
+	padding: 1em;
+	border: solid thin #AAA;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	width: 90%;
+	position: relative;
+	top: 80%;
+	color: #999;
+	background: white;
 }
