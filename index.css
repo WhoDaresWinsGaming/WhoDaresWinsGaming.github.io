@@ -62,7 +62,7 @@ footer {
 	text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
 	.jumbotron {
 		background: none;
 	}
