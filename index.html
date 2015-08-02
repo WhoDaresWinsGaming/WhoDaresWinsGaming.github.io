@@ -106,9 +106,11 @@
   			
 			// Get the IP
 			getFileFromServer("https://rawgit.com/WhoDaresWinsGaming/WhoDaresWinsGaming.github.io/ip/ip", function(txt) {
-				if (txt === null) {
+				if ((txt === null) || (txt.toLowerCase() === "service unavailable") || (txt.toLowerCase() === "")) {
 					// An error occurred
 					console.error("Oh noes! Can't get the server IP :(");
+					$("#ip > h1").text("ts3.whodareswinsgaming.com");
+					$("#ip > h3").text("Cannot get server IP");
 				} else {
 					$("#ip > h1").text(txt);
 				}
