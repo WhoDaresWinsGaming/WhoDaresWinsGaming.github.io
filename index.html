@@ -36,10 +36,12 @@
 						<div class="collapse navbar-collapse" id="navbar-collapse">
 							<ul class="nav navbar-nav">
 								<li><a href="/">Home</a></li>
-								<li><a href="http://steamcommunity.com/groups/WhoDaresWinsGaming-G">Steam Community</a></li>
 								<li><a href="#teamspeak">Teamspeak</a></li>
 								<li><a href="#rules">Rules</a></li>
 								<li><a href="/staff">Staff</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="http://steamcommunity.com/groups/WhoDaresWinsGaming-G">Steam Community</a></li>
 							</ul>
 						</div>
 					</div>
@@ -67,6 +69,7 @@
 						<li>No playing music</li>
 						<li>No shouting</li>
 						<li>The admins word is final</li>
+						<li>No sexual harassment</li>
 					</ol>
 				</div>
 				<div id="ip" class="well well-lg">
@@ -110,7 +113,7 @@
 					// An error occurred
 					console.error("Oh noes! Can't get the server IP :(");
 					$("#ip > h1").text("ts3.whodareswinsgaming.com");
-					$("#ip > h5").text("Cannot get server IP");
+					$("#ip > h5").text("(Cannot get server IP, using fallback address)");
 				} else {
 					$("#ip > h1").text(txt);
 				}

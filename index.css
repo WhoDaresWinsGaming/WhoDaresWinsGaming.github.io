@@ -99,3 +99,52 @@ footer {
 	color: #999;
 	background: white;
 }
+
+.col-md-4 {
+	margin: 0;
+}
+
+.col-md-4 * {
+	text-align: center;
+}
+
+.glyphicon {
+	margin-left: auto;
+	width: 100%;
+	margin-right: auto;
+	font-size: 5em;
+}
+
+#xenxier .glyphicon, #geraint .glyphicon {
+	font-size: 8em;
+	vertical-align: center;
+	margin-top: 20%;
+}
+
+#geraint .glyphicon {
+	color: IndianRed;
+}
+
+#xenxier .glyphicon {
+	color: DeepSkyBlue;
+}
+
+#pleasentg .glyphicon {
+	color: DarkViolet;
+}
+
+#wazzzup .glyphicon {
+	color: DeepPink;
+}
+
+#brad .glyphicon {
+	color: SaddleBrown;
+}
+
+#luke .glyphicon {
+	color: #111;
+}
+
+#sakura .glyphicon {
+	color: FireBrick;
+}
