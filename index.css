@@ -155,7 +155,6 @@ footer {
 
 #scott .glyphicon {
 	color: white;
-	border: black solid thin;
 }
 
 #kevin .glyphicon {
@@ -167,7 +166,7 @@ footer {
 }
 
 #jake .glyphicon {
-	color: blue;
+	color: pink;
 }
 
 #myles .glyphicon {
