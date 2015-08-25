@@ -104,11 +104,11 @@ footer {
 	background: white;
 }
 
-.col-md-4 {
+.col-md-4, .col-md-3 {
 	margin: 0;
 }
 
-.col-md-4 * {
+.col-md-4 *, .col-md-3 * {
 	text-align: center;
 }
 
@@ -151,4 +151,29 @@ footer {
 
 #sakura .glyphicon {
 	color: FireBrick;
+}
+
+#scott .glyphicon {
+	color: white;
+	border: black solid thin;
+}
+
+#kevin .glyphicon {
+	color: yellow;
+}
+
+#dale .glyphicon {
+	color: skyblue;
+}
+
+#jake .glyphicon {
+	color: blue;
+}
+
+#myles .glyphicon {
+	color: green;
+}
+
+#kameon .glyphicon {
+	color: orange;
 }
