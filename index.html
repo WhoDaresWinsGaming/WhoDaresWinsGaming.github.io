@@ -71,7 +71,8 @@
 						<li>The admins word is final</li>
 						<li>No sexual harassment</li>
 					</ol>
-				</div>
+				</div> 
+				<div id="ohnoes" class="alert alert-warning" role="alert"><strong>Oh noes!</strong> The server IP hasn't been detected in a while. The server is probably down :'C</div>
 				<div id="ip" class="well well-lg">
 					<h1></h1>
 					<h2></h2>
@@ -126,6 +127,10 @@
 					console.error("Oh noes! Can't get the server time :(");
 				} else {
 					$("#ip > h2").text("last updated " + jQuery.timeago(txt));
+				}
+				
+				if (((new Date() - new Date(txt.trim())) / 1000 / 60 / 60 / 60) > 2) {
+					$("#ohnoes").show();
 				}
 			});
   		});
