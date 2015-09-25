@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>WDW Gaming</title>
+		<title>WDW-G Boosting</title>
 		
 		<!-- CDN CSS -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -56,29 +56,8 @@
 				  <h1><strong>W</strong>INS</h1>
 				  <h1><strong>G</strong>AMING</h1>
 				</div>
-				<div id="teamspeak">
-					<h1>The Teamspeak Server</h1>
-					<p>Welcome to Who Dares Wins Gaming. WDW was founded by WDWGman in 2013, we are a friendly group who welcomes anyone who is interested in gaming. As a community we often play games like Day-Z, Counter Strike, Arma 2/3 etc. We encourage a welcoming and friendly attitude towards players that enjoy having fun online. Anyone is welcome to join the clan and to join in on the fun.</p>
-				</div>
-				<div id="rules">
-					<h1>The Rules</h1>
-					<p>The rules for the WDW teamspeak server are as follows:</p>
-					<ol>
-						<li>No abuse towards users</li>
-						<li>No abusing powers</li>
-						<li>No advertising</li>
-						<li>No spamming</li>
-						<li>No playing music</li>
-						<li>No shouting</li>
-						<li>The admins word is final</li>
-						<li>No sexual harassment</li>
-					</ol>
-				</div> 
-				<div id="ohnoes" class="alert alert-warning" role="alert"><strong>Oh noes!</strong> The server IP hasn't been detected in a while. The server is probably down :'C</div>
-				<div id="ip" class="well well-lg">
-					<h1></h1>
-					<h2></h2>
-					<h5>Alternatively use ts3.whodareswinsgaming.com as the teamspeak address</h5>
+				<div id="boosting">
+				  <font size=5>WhoDaresWins Gaming offers a boosting service to low level Counter-Strike: Global Offensive players. We offer the boosting service to all players under the rank of DMG for a rate of &pound6 per game. You can bring up to 2 friends with you as we put 2 boosters in your game. If the game is not won (there is a hacker on the enemy team) you will not be charged. For more information or to book a booting game please contact either <a href="http://steamcommunity.com/id/Gman258258">Gman258258</a> or <a href="http://steamcommunity.com/profiles/76561198208284340">Wazzz_up12345</a> on steam.</font>
 				</div>
 			</div>
 			<footer>This website was created by Xenxier and WDWGman</footer>
@@ -109,32 +88,7 @@
 		
 		jQuery(document).ready(function() {
   			jQuery("abbr.timeago").timeago();
-  			
-			// Get the IP
-			getFileFromServer("https://rawgit.com/WhoDaresWinsGaming/WhoDaresWinsGaming.github.io/ip/ip", function(txt) {
-				if ((txt === null) || (txt.toLowerCase() === "service unavailable") || (txt.toLowerCase() === "")) {
-					// An error occurred
-					console.error("Oh noes! Can't get the server IP :(");
-					$("#ip > h1").text("ts3.whodareswinsgaming.com");
-					$("#ip > h5").text("(Cannot get server IP, using fallback address)");
-				} else {
-					$("#ip > h1").text(txt);
-				}
-			});
-		
-			// Get the time since the last update
-			getFileFromServer("https://rawgit.com/WhoDaresWinsGaming/WhoDaresWinsGaming.github.io/ip/time", function(txt) {
-				if (txt === null) {
-					// An error occurred
-					console.error("Oh noes! Can't get the server time :(");
-				} else {
-					$("#ip > h2").text("last updated " + jQuery.timeago(txt));
-				}
-				
-				if (((new Date() - new Date(txt.trim())) / 1000 / 60 / 60) > 2) {
-					$("#ohnoes").show();
-				}
-			});
+
   		});
 	</script>
 	</body>
